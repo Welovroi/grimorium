@@ -1,0 +1,5 @@
+.rvmrc
+*.gem
+*.swp
+**/*.swp
+Gemfile.lock
