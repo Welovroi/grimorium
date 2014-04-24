@@ -15,5 +15,10 @@ Gem::Specification.new do |s|
   s.email         = ['rsantamaria.dev@gmail.com']
   s.homepage      = 'http://github.com/Welovroi/grimorium'
 
-  s.files         = Dir.glob("{lib}/**/*") + %w(README.md)
+  s.files         = Dir.glob("{lib}/**/*")  + %w(README.md)
+  s.test_files    = Dir.glob("{spec}/**/*") + %w(.rspec)
+  s.require_paths = ["lib"]
+
+  s.add_development_dependency "rspec"
+  s.add_development_dependency "mocha"
 end
