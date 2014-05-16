@@ -1,4 +1,5 @@
 require 'grimorium'
+require 'pry-debugger'
 
 RSpec.configure do |config|
 

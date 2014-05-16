@@ -21,4 +21,6 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "rspec"
   s.add_development_dependency "mocha"
+  s.add_development_dependency "pry-debugger"
+  s.add_development_dependency "pry-doc"
 end
