@@ -5,8 +5,10 @@ describe Grimorium::Integration::Cucumber::Sentences do
   it "sifts goto step" do
     @evaluating = described_class::GOTO
 
-    sifting('I go to the home page').should eq        ["home"]
-    sifting('I go to the article new page').should eq ["article new"]
+    sifting('I go to the home page').should eq                             ["go to", "home", nil]
+    sifting('I go to the article new page').should eq                      ["go to", "article new", nil]
+    sifting('I go to the article edit page with: article_id 10').should eq ["go to", "article edit", "article_id 10"]
+    sifting('I am in the articles page').should eq                         ["am in", "articles", nil]
   end
 
 
@@ -28,6 +30,7 @@ describe Grimorium::Integration::Cucumber::Sentences do
   end
 
 
+  # returns an array of matches against @evaluating
   def sifting(sentence)
     sentence.scan(@evaluating).flatten
   end
